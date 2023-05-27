@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}" type="text/css">
+    <title>Lecture Collection</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Lectures</h1>
+
+    <ul class="list">
+        {% for info in info_list %}
+        <li><a href="{{ info.info_link }}" >{{ info.info_text }}</a></li>
+        {% endfor %}
+    </ul>
+    <footer>
+        <small>&copy; iXhong </small>
+    </footer>
+</body>
+</html>
