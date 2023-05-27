@@ -15,6 +15,7 @@ def getinfo(url, strainer, num):
     # parsing-only-part-of-a-document with the SoupStrainer of bs4
     data = {}
     info = []
+    info_id = 0
 
     r = requests.get(url)
     r.encoding = 'utf-8'
@@ -24,8 +25,10 @@ def getinfo(url, strainer, num):
     for li in lis:
         if 'info' in li['href']:
             # only choose the href with info
+            info_id += 1
             info_text = li.get_text(strip=True)
             info_link = li['href'].replace("..", url[:-num])
+            data['info_id'] = info_id
             data['info_text'] = info_text
             data['info_link'] = info_link
             info.append(copy.copy(data))
