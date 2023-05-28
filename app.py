@@ -5,6 +5,7 @@ import save
 
 
 scheduler = BackgroundScheduler()
+app = Flask(__name__)
 
 
 def job():
@@ -15,8 +16,6 @@ def job():
     path = './data/data.csv'
     save.csv_save(path)
 
-
-app = Flask(__name__)
 
 scheduler.add_job(job(), id="save", trigger='interval', hours=6)
 
