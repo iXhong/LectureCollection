@@ -13,16 +13,19 @@ def getinfo(url, strainer, num):
     """
     only_class = SoupStrainer(class_=strainer)
     # parsing-only-part-of-a-document with the SoupStrainer of bs4
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                      'Chrome/111.0.0.0 Safari/537.36'}
     data = {}
     info = []
     info_id = 0
 
-    r = requests.get(url)
+    r = requests.get(url, headers=headers)
     r.encoding = 'utf-8'
     soup = BeautifulSoup(r.text, 'html.parser', parse_only=only_class)
     lis = soup.find_all("a")
 
-    for li in lis:
+    for li in lis[:10]:
         if 'info' in li['href']:
             # only choose the href with info
             info_id += 1
@@ -36,4 +39,3 @@ def getinfo(url, strainer, num):
             # info.append(lambda data: data)
 
     return info
-
