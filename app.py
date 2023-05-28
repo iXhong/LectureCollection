@@ -1,17 +1,18 @@
 from flask import Flask, render_template
-import web_info
+import sqlite3
 
-url = "https://cise.njtech.edu.cn/index/xsdt.htm"
-strainer = 'txt'
-num = 15
-info_list = web_info.getinfo(url, strainer, num)
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():  # put application's code here
-    return render_template('index.html', info_list=info_list)
+    conn = sqlite3.connect('./data/test.db')
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+    info = c.execute("select * from info")
+    infos = info.fetchall()
+    return render_template('index.html', infos=infos)
 
 
 if __name__ == '__main__':
