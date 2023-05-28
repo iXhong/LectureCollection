@@ -6,28 +6,19 @@
     <title>Lecture Collection</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Lectures</h1>
-
-{#    <ul class="list">#}
-{#        {% for info in info_list %}#}
-{#        <li><a href="{{ info.info_link }}" >{{ info.info_text }}</a></li>#}
-{#        {% endfor %}#}
-{#    </ul>#}
-    <table class="fixed_headers">
-        <thead>
-            <tr>
-                <th>Look Down</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for info in infos %}
-        <tr>
-            <td><a href="{{ info["link"] }}">{{ info["name"] }}</a> </td>
-        </tr>
-        {% endfor %}
-        </tbody>
-
-    </table>
+    <h1 style="text-align: center;">Oh My Lectures!</h1>
+    <hr>
+        <table>
+            <thead><tr><th>Colleges</th><th>Lectures</th></tr></thead>
+                <tbody>
+                {% for info in infos %}
+                <tr>
+                    <td>{{ info["college"] }}</td>
+                    <td><a href="{{ info["link"] }}">{{ info["name"] }}</a> </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+        </table>
     <footer>
         <small>&copy; iXhong </small>
     </footer>
