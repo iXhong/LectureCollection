@@ -1,7 +1,7 @@
 {
   "数理科学学院": {
     "url": "https://lxy.njtech.edu.cn/index/tzgg.htm",
-    "strainer": "",
+    "strainer": "ct",
     "num": 15
   },
   "化工院": {
@@ -33,10 +33,5 @@
     "url": "https://cce.njtech.edu.cn/xwxx/xsxx.htm",
     "strainer": "right-list",
     "num": 14
-  },
-  "建筑学院": {
-    "url": "https://arch.njtech.edu.cn/index/xsjl.htm",
-    "strainer": "news-title",
-    "num": 15
   }
 }
