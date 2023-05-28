@@ -1,0 +1,42 @@
+{
+  "数理科学学院": {
+    "url": "https://lxy.njtech.edu.cn/index/tzgg.htm",
+    "strainer": "",
+    "num": 15
+  },
+  "化工院": {
+    "url": "https://hgy.njtech.edu.cn/index/xshd.htm",
+    "strainer": "txt",
+    "num": 15
+  },
+  "计算机院": {
+    "url": "https://cise.njtech.edu.cn/index/xsdt.htm",
+    "strainer": "txt",
+    "num": 15
+  },
+  "材料院":{
+        "url": "https://cly.njtech.edu.cn/index/kyxs.htm",
+        "strainer": "txt",
+        "num": 15
+      },
+  "柔性电子": {
+    "url": "https://iam.njtech.edu.cn/tzgg/ztjz.htm",
+    "strainer": "listlinkt",
+    "num": 14
+  },
+  "化学与分子工程": {
+    "url": "https://chem.njtech.edu.cn/index/xsdt.htm",
+    "strainer": "listlinkt",
+    "num": 15
+  },
+  "土木工程学院": {
+    "url": "https://cce.njtech.edu.cn/xwxx/xsxx.htm",
+    "strainer": "right-list",
+    "num": 14
+  },
+  "建筑学院": {
+    "url": "https://arch.njtech.edu.cn/index/xsjl.htm",
+    "strainer": "news-title",
+    "num": 15
+  }
+}
