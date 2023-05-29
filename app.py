@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 import csv
-from apscheduler.schedulers.background import BackgroundScheduler
 import save
+from datetime import datetime
+from apscheduler.schedulers.background import BackgroundScheduler
 
 
-scheduler = BackgroundScheduler()
 app = Flask(__name__)
 
 
@@ -15,9 +15,13 @@ def job():
     """
     path = './data/data.csv'
     save.csv_save(path)
+    print(f"job {datetime.now()} ok")
 
 
-scheduler.add_job(job(), id="save", trigger='interval', hours=6)
+scheduler = BackgroundScheduler(daemon=True)
+scheduler.add_job(job, 'interval', hours=6)
+scheduler.start()
+# set up the schedule job
 
 
 @app.route('/')
@@ -28,5 +32,5 @@ def index():  # put application's code here
 
 
 if __name__ == '__main__':
-    scheduler.start()
     app.run()
+    print("app running ok")
