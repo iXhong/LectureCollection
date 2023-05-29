@@ -3,6 +3,7 @@ import csv
 import save
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
+from waitress import serve
 
 
 app = Flask(__name__)
@@ -32,5 +33,6 @@ def index():  # put application's code here
 
 
 if __name__ == '__main__':
-    app.run()
+    # app.run(
+    serve(app, host='0.0.0.0', port=5000)
 
