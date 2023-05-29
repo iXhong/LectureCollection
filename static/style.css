@@ -38,3 +38,8 @@ table {
 table tr:hover{
     background-color: #f8f9fa;
 }
+.thinker{
+    width: 700px;
+    height: auto;
+    margin: auto;
+}
