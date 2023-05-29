@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}" type="text/css">
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}">
     <title>Lecture Collection</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
                 {% endfor %}
                 </tbody>
         </table>
+        <img class="thinker" src="{{ url_for('static', filename='the_thinker.jpg') }}">
     <footer>
         <small>&copy; iXhong </small>
     </footer>

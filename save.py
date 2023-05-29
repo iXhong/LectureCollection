@@ -34,3 +34,4 @@ def csv_save(csvpath):
             c.writerow(item)
 
     csvfile.close()
+    print("write ok")

@@ -26,11 +26,11 @@ scheduler.start()
 
 @app.route('/')
 def index():  # put application's code here
-    csvfile = open('./data/test.csv', newline='')
+    csvfile = open('./data/data.csv', newline='')
     infos = csv.DictReader(csvfile, delimiter=',')
     return render_template('index.html', infos=infos)
 
 
 if __name__ == '__main__':
     app.run()
-    print("app running ok")
+
