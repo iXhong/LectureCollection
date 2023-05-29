@@ -1,5 +1,5 @@
 {
-  "数理科学学院": {
+  "数理学院": {
     "url": "https://lxy.njtech.edu.cn/index/tzgg.htm",
     "strainer": "ct",
     "num": 15
@@ -24,7 +24,7 @@
     "strainer": "listlinkt",
     "num": 14
   },
-  "化学与分子工程": {
+  "化学分子": {
     "url": "https://chem.njtech.edu.cn/index/xsdt.htm",
     "strainer": "listlinkt",
     "num": 15
