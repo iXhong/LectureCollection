@@ -5,11 +5,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}" type="text/css">
     <link rel="icon" href="{{ url_for('static', filename='icon.png') }}">
     <title>Lecture Collection</title>
+    <div class="banner"></div>
 </head>
-<body>
-    <h1 style="text-align: center;">Oh My Lectures!</h1>
+<section class="content">
+    <h1 style="text-align: center;font-size: xxx-large;font-style: italic">Oh My Lectures!</h1>
     <hr>
-        <table>
+        <table class="table">
             <thead><tr><th>Colleges</th><th>Lectures</th></tr></thead>
                 <tbody>
                 {% for info in infos %}
@@ -20,9 +21,9 @@
                 {% endfor %}
                 </tbody>
         </table>
-        <img class="thinker" src="{{ url_for('static', filename='the_thinker.jpg') }}">
+        <img class="thinker" src="{{ url_for('static', filename='/imgs/thinker.webp') }}">
     <footer>
         <small>&copy; <a href="https://github.com/iXhong">iXhong</a></small>
     </footer>
-</body>
+</section>
 </html>
