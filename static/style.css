@@ -1,9 +1,8 @@
-body {
-    margin: auto;
-    max-width: 700px;
-    font-size: 20px;
-    font-family: Helvetica, Arial, sans-serif;
-    white-space: nowrap;
+.content{
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: 960px;
+    max-width: 100%;
 }
 
 /* 页脚 */
@@ -30,6 +29,8 @@ hr:after {
     top: -13px;
 }
 table {
+    margin-right: auto;
+    margin-left: auto;
     table-layout: auto;
     margin-bottom: 50px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -39,7 +40,15 @@ table tr:hover{
     background-color: #f8f9fa;
 }
 .thinker{
-    width: 700px;
-    height: auto;
-    margin: auto;
+    width: 1000px;
+
+}
+.banner{
+    background-color: #333;
+    background-image: url("./imgs/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
