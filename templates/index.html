@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}" type="text/css">
-    <link rel="icon" href="{{ url_for('static', filename='/imgs/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static',_scheme='https',_external=True,filename= 'style.css') }}" type="text/css">
+    <link rel="icon" href="{{ url_for('static',_scheme='https',_external=True,filename='/imgs/icon.png') }}">
     <title>Lecture Collection</title>
     <div class="banner"></div>
 </head>
@@ -16,12 +16,12 @@
                 {% for info in infos %}
                 <tr>
                     <td>{{ info["college"] }}</td>
-                    <td><a href="{{ info["link"] }}">{{ info["name"] }}</a> </td>
+                    <td><a href="{{ info["link"] }}">{{ info["name"] }}</a></td>
                 </tr>
                 {% endfor %}
                 </tbody>
         </table>
-        <img class="thinker" src="{{ url_for('static', filename='/imgs/thinker.webp') }}">
+        <img class="thinker" src="{{ url_for('static',_scheme='https',_external=True, filename='/imgs/thinker.webp') }}">
     <footer>
         <small>&copy; <a href="https://github.com/iXhong">iXhong</a></small>
     </footer>
